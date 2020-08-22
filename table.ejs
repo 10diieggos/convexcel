@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Table</title>
+</head>
+<body>
+  
+  <table>
+    <thead>
+      <% header.forEach(column => { %> 
+        <th><%= column %></th>
+      <% }) %>
+    </thead>
+    <tbody>
+      <% rows.forEach(row => { %> 
+        <tr>
+          <% row.forEach(cel => { %>
+            <td><%= cel %></td>
+          <% }) %>
+        </tr>
+      <% }) %>
+    </thead>
+    </tbody>
+  </table>
+
+</body>
+</html>
