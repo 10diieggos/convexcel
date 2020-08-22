@@ -11,9 +11,13 @@ class Reader {
   async Read (filePath) {
     
     try {
+    
       return await this.readFile(filePath, { encoding: 'utf-8' });
+   
     } catch (err) {
+     
       return err;
+   
     };
 
   };
