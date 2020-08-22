@@ -4,10 +4,13 @@ class Table {
     this.rows = data;
   };
 
-  Log () {
-    console.log(this.header);
-    console.log(this.rows);
-  }
+  get RowsCount () {
+    return this.rows.length
+  };
+ 
+  get ColumnsCount() {
+    return this.header.length
+  };
 
 };
 
