@@ -12,7 +12,7 @@ class Reader {
     
     try {
     
-      return await this.readFile(filePath, { encoding: 'utf-8' });
+      return await this.readFile(filePath, { encoding: 'utf-8' });//returns the .csv file content
    
     } catch (err) {
      

@@ -10,13 +10,12 @@ let reader = new Reader();
 let writer = new Writer();
 
 async function main() {
-  let data = await reader.Read('./users.csv');
-  data = Process(data); //turns data string into data arrays;
-  let table = new Table(data);
-  let HTML = await Parse(table);
-  let message = await writer.Write(`./${Date.now()}.html`, HTML);
-  console.log(message)
-  WritePDF(`./${Date.now()}.pdf`, HTML);
+  let data = await reader.Read('./users.csv');//getting the contents of the file (csv) in a string
+  data = Process(data); //turns string into arrays;
+  let table = new Table(data);//defining headers, rows and counting columns and rows
+  let HTML = await Parse(table);//generate source code as a unique string (HTML)
+  await writer.Write(`./${Date.now()}.html`, HTML);//write the source code in a generated .pdf file
+  WritePDF(`./${Date.now()}.pdf`, HTML);//write the source code in a generated .pdf file
 };
 
 main();
