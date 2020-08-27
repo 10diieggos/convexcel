@@ -7,17 +7,9 @@ class Writer {
     this.writeFile = util.promisify(fs.writeFile);
   };
 
-  async Write (filePath, data) {
-    
-    try {
+  Write (filePath, data) {
       
-      await this.writeFile(filePath, data);
-    
-    } catch (err) {
-     
-      return err;
-    
-    };
+      this.writeFile(filePath, data);
 
   };
 
