@@ -14,7 +14,7 @@ async function main() {
   data = Process(data); //turns string into arrays;
   let table = new Table(data);//defining headers, rows and counting columns and rows
   let HTML = await Parse(table);//generate source code as a unique string (HTML)
-  await writer.Write(`./${Date.now()}.html`, HTML);//write the source code in a generated .pdf file
+  writer.Write(`./${Date.now()}.html`, HTML);//write the source code in a generated .pdf file
   WritePDF(`./${Date.now()}.pdf`, HTML);//write the source code in a generated .pdf file
 };
 
