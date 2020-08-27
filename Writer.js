@@ -12,7 +12,6 @@ class Writer {
     try {
       
       await this.writeFile(filePath, data);
-      return `ok, html writed into ${filePath}`;
     
     } catch (err) {
      
