@@ -3,13 +3,10 @@ const util = require('util');
 
 
 class Writer {
-  constructor () {
-    this.writeFile = util.promisify(fs.writeFile);
-  };
 
-  Write (filePath, data) {
+  static Write (filePath, data) {
       
-      this.writeFile(filePath, data);
+      fs.writeFile(filePath, data);
 
   };
 
